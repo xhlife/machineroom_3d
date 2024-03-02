@@ -4,7 +4,7 @@ import MachineRoom from "./components/MachineRoom";
 import Plane from './components/Plane'
 let room: MachineRoom;
 // let canvas: HTMLCanvasElement;
-let _canvas: HTMLCanvasElement
+// let _canvas: HTMLCanvasElement
 
 function App() {
   const canvas = useRef(null)
@@ -27,7 +27,7 @@ function App() {
   // mounted
   useEffect(() => {
     if (!canvas.current) return;
-    _canvas = canvas.current
+    // _canvas = canvas.current
     canvas.current.width = window.innerWidth;
     canvas.current.height = window.innerHeight;
     if(!room) {

@@ -10,7 +10,7 @@ import {
   WebGLRenderer,
   Vector2,
   Color,
-  BoxGeometry,
+  // BoxGeometry,
 } from "three";
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
@@ -46,13 +46,13 @@ export default class MachineRoom {
   curCabinet: Mesh;
 
   // 鼠标滑入机柜事件，参数为机柜对象
-  onMouseOverCabinet = (cabinet: Mesh) => {};
+  onMouseOverCabinet: (cabinet: Mesh) => void;
 
   // 鼠标在机柜上移动的事件， 参数为鼠标在canvas画布上的坐标位
-  onMouseMoveCabinet = (x: number, y: number) => {};
+  onMouseMoveCabinet: (x: number, y: number) => void;
 
   // 鼠标移出机柜的事件
-  onMouseOutCabinet = () => {};
+  onMouseOutCabinet: () =>void;
 
   constructor(canvas: HTMLCanvasElement, modelPath: string = "./models/") {
     this.renderer = new WebGLRenderer({ canvas });
