@@ -1,2 +1,11 @@
 # machineroom_3d
-three.js 模拟 服务器机房
+three.js  服务器机房监控系统
+
+
+
+
+
+### 模型选择
+
+
+

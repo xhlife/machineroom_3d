@@ -8,6 +8,9 @@ let _canvas: HTMLCanvasElement
 
 function App() {
   const canvas = useRef(null)
+  function handleMouseMove({clientX,  clientY}) {
+    room.selectCabinet(clientX, clientY)
+  }
   // mounted
   useEffect(() => {
     if (!canvas.current) return;
@@ -21,7 +24,7 @@ function App() {
     }
   }, []);
   return (
-    <div className="App">
+    <div className="App" onMouseMove={handleMouseMove}>
       <canvas id="canvas" ref={canvas}></canvas>
     </div>
   );
